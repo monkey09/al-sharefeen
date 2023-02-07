@@ -1,0 +1,388 @@
+body {
+  overflow-x: hidden;
+}
+
+section, nav, footer, #upperbar, #lowerbar {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#about, #contact {
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+
+#services, #products {
+  padding-top: 150px;
+}
+
+#features, #reservation {
+  padding-top: 105px;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+}
+.carousel .carousel-inner {
+  height: 100%;
+  width: 100%;
+}
+.carousel .carousel-inner .carousel-item {
+  height: 100%;
+  width: 100%;
+}
+
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#upperbar {
+  height: 50px;
+  position: fixed;
+  z-index: 1000;
+  transition: background-color 0.4s linear;
+}
+
+#navbar {
+  transition: background-color 0.4s linear;
+}
+@media (min-width: 768px) {
+  #navbar {
+    margin-top: 50px;
+  }
+}
+#navbar .navbar-brand {
+  color: #2E9CAA;
+}
+#navbar .navbar-brand span {
+  color: gold;
+}
+
+#slider-container {
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+#slider-container #slider .carousel-inner .carousel-item {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#slider-container #slider .carousel-inner .carousel-item:first-child {
+  background-image: url("../imgs/first.jpg");
+}
+#slider-container #slider .carousel-inner .carousel-item:nth-child(2) {
+  background-image: url("../imgs/second.jpg");
+}
+#slider-container #slider .carousel-inner .carousel-item:last-child {
+  background-image: url("../imgs/third.jpg");
+}
+
+.main-header {
+  margin-bottom: 100px;
+}
+.main-header .header-container {
+  position: relative;
+}
+.main-header .header-container span:first-child {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: -20px;
+  left: -60px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, left 1s ease;
+  border-left: 2px solid gold;
+  border-top: 2px solid gold;
+}
+.main-header .header-container h1 {
+  font-weight: bold;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.main-header .header-container span:last-child {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  bottom: -20px;
+  right: -60px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, right 1s ease;
+  border-right: 2px solid #2E9CAA;
+  border-bottom: 2px solid #2E9CAA;
+}
+
+#about {
+  background-color: #f5f6fa;
+}
+@media (min-width: 768px) {
+  #about .col-md-6:first-child {
+    padding-top: 170px;
+  }
+}
+#about .col-md-6:first-child h2 {
+  font-weight: bold;
+}
+#about .col-md-6:first-child p {
+  line-height: 2;
+}
+#about .about-text {
+  position: relative;
+  opacity: 0;
+  left: -50%;
+  transition: opacity 1s ease-in-out, left 1s ease;
+}
+#about .about-image {
+  position: relative;
+  width: 80%;
+  box-shadow: 0px 5px 10px 5px #CCC;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+#services .serv {
+  opacity: 0;
+  position: relative;
+  top: -30px;
+  background-color: #f9f9f9;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 5px;
+}
+#services .serv.first-serv {
+  transition: opacity 1s ease-out 0s, top 1s ease-out 0s, transform 0.3s ease-in-out 0s, box-shadow 0.3s ease-in-out 0s;
+}
+#services .serv.second-serv {
+  transition: opacity 1s ease-out 0.2s, top 1s ease-out 0.2s, transform 0.3s ease-in-out 0s, box-shadow 0.3s ease-in-out 0s;
+}
+#services .serv.third-serv {
+  transition: opacity 1s ease-out 0.4s, top 1s ease-out 0.4s, transform 0.3s ease-in-out 0s, box-shadow 0.3s ease-in-out 0s;
+}
+#services .serv i {
+  font-size: 3rem;
+}
+#services .serv p {
+  line-height: 2;
+}
+#services .serv:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 5px 10px 5px #CCC;
+  cursor: default;
+}
+
+#features {
+  height: 500px;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+#features #slider2 .carousel-inner .carousel-item {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#features #slider2 .carousel-inner .carousel-item:first-child {
+  background-image: url("../imgs/first.jpg");
+}
+#features #slider2 .carousel-inner .carousel-item:nth-child(2) {
+  background-image: url("../imgs/second.jpg");
+}
+#features #slider2 .carousel-inner .carousel-item:last-child {
+  background-image: url("../imgs/third.jpg");
+}
+
+#products .col-md-3 {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+#products .col-md-3:first-child {
+  transition-delay: 0s;
+}
+#products .col-md-3:first-child .card-img-top {
+  background-image: url("../imgs/product1.jpg");
+}
+#products .col-md-3:nth-child(2) {
+  transition-delay: 0.1s;
+}
+#products .col-md-3:nth-child(2) .card-img-top {
+  background-image: url("../imgs/product2.jpg");
+}
+#products .col-md-3:nth-child(3) {
+  transition-delay: 0.2s;
+}
+#products .col-md-3:nth-child(3) .card-img-top {
+  background-image: url("../imgs/product3.jpg");
+}
+#products .col-md-3:nth-child(4) {
+  transition-delay: 0.3s;
+}
+#products .col-md-3:nth-child(4) .card-img-top {
+  background-image: url("../imgs/product4.jpg");
+}
+#products .col-md-3:nth-child(5) {
+  transition-delay: 0.4s;
+}
+#products .col-md-3:nth-child(5) .card-img-top {
+  background-image: url("../imgs/product5.jpg");
+}
+#products .col-md-3:nth-child(6) {
+  transition-delay: 0.5s;
+}
+#products .col-md-3:nth-child(6) .card-img-top {
+  background-image: url("../imgs/product6.jpg");
+}
+#products .col-md-3:nth-child(7) {
+  transition-delay: 0.6s;
+}
+#products .col-md-3:nth-child(7) .card-img-top {
+  background-image: url("../imgs/product7.jpg");
+}
+#products .col-md-3:last-child {
+  transition-delay: 0.7s;
+}
+#products .col-md-3:last-child .card-img-top {
+  background-image: url("../imgs/product8.jpg");
+}
+#products .product {
+  width: 100%;
+  height: 700px;
+  margin-bottom: 50px;
+}
+#products .product .card-img-top {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+#products .product .card-body i {
+  color: gold;
+}
+#products .product .card-body span {
+  color: #2E9CAA;
+}
+#products .product .card-body span i {
+  color: #2E9CAA;
+}
+#products .product .card-footer img {
+  width: 100%;
+}
+
+#reservation .overlay-container {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url("../imgs/cover.jpg");
+}
+#reservation .overlay-container .overlay {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#reservation .overlay-container .overlay .reservation-form {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+#contact {
+  background-color: #f5f6fa;
+}
+#contact input, #contact textarea {
+  border: none;
+}
+#contact input:focus, #contact textarea:focus {
+  box-shadow: 1px 1px 5px 1px #2E9CAA;
+}
+#contact label {
+  color: #2E9CAA;
+}
+#contact form {
+  opacity: 0;
+  top: -30px;
+  position: relative;
+  transition: opacity 1s ease-out, top 1s ease-out;
+}
+#contact .contacts {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  bottom: -30px;
+  position: relative;
+  transition: opacity 1s ease-out, bottom 1s ease-out;
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-image: url("../imgs/contact.jpg");
+  border-radius: 5px;
+  overflow: hidden;
+}
+#contact .contacts ul {
+  margin-top: 75px;
+}
+#contact .contacts ul li:not(:last-child) {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+#contact .contacts hr:last-of-type {
+  margin-top: 90px;
+}
+#contact .contacts h1 {
+  color: #2E9CAA;
+}
+#contact .contacts h1 span {
+  color: gold;
+}
+
+#footer {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+#footer ul.page-items li a {
+  color: #FFF;
+  text-transform: uppercase;
+}
+#footer ul.page-items li a:hover {
+  color: gold;
+}
+#footer ul.page-items li a.active {
+  color: gold;
+}
+#footer ul.soc-items li {
+  background-color: #2E9CAA;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+}
+#footer ul.soc-items li a {
+  transition: transform 0.2s ease-in;
+}
+#footer ul.soc-items li a i {
+  font-size: 1.5rem;
+}
+#footer ul.soc-items li a:hover {
+  transform: scale(1.3);
+}
+
+#lowerbar {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 56px;
+  background-color: #000;
+}
+#lowerbar p {
+  font-size: 1.1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
